@@ -4,7 +4,7 @@
 
 New reference design. Actual motors, battery, driver module, Bluetooth app, physical speed/range and racing results are unverified. No original car photo/video has been supplied.
 
-Host tests cover disarmed startup, arming, directions, speed selection, timeout, unsupported commands, stop input, rearming and reversal timing including clock wraparound. GitHub Actions runs these tests and compiles for UNO. Record the verified run URL after execution. A successful build does not establish hardware performance.
+Host tests cover disarmed startup, arming, directions, speed selection, timeout, unsupported commands, stop input, rearming and reversal timing including clock wraparound. GitHub Actions runs these tests and compiles for UNO. Both jobs passed in [verified run #1](https://github.com/Jayshah3309/arduino-bluetooth-racing-car/actions/runs/39404990908), commit `793f129`, on 20 October 2026. The Arduino setup action emitted a runtime deprecation warning; it did not fail the build. A successful build does not establish hardware performance.
 
 ## Acceptance checklist
 
