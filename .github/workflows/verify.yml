@@ -1,0 +1,23 @@
+name: Verify racing car firmware
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Test command and motor policies
+        run: |
+          g++ -std=c++11 -Wall -Wextra -Werror tests/control_test.cpp -o /tmp/racing-car-test
+          /tmp/racing-car-test
+  uno-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Compile UNO sketch
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr@1.8.6
+          arduino-cli compile --fqbn arduino:avr:uno --warnings all firmware/racing_car
