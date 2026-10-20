@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920"><rect width="1200" height="920" fill="#f8fafc"/>
+<text x="30" y="42" font-family="Arial,sans-serif" font-size="25" fill="#16324f">ARDUINO BLUETOOTH RACING CAR · REFERENCE CONNECTIONS</text>
+<text x="30" y="77" font-family="Arial,sans-serif" font-size="18" fill="#16324f">UNO R3 · HC-05 · L298N · proposed two-motor build · hardware verification pending</text>
+<rect x="40" y="130" width="290" height="390" rx="8" fill="#dbeafe" stroke="#94a3b8"/>
+<text x="60" y="170" font-family="Arial,sans-serif" font-size="23" fill="#16324f">ARDUINO UNO R3</text>
+<text x="60" y="215" font-family="Arial,sans-serif" font-size="17" fill="#16324f">USB → logic power</text>
+<text x="60" y="250" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D10 RX ← HC-05 TX</text>
+<text x="60" y="285" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D11 TX → divider → RX</text>
+<text x="60" y="320" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D5 PWM → ENA</text>
+<text x="60" y="355" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D4 / D7 → IN1 / IN2</text>
+<text x="60" y="390" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D6 PWM → ENB</text>
+<text x="60" y="425" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D8 / D9 → IN3 / IN4</text>
+<text x="60" y="460" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D2 → NC stop → GND</text>
+<rect x="700" y="130" width="455" height="175" rx="8" fill="#ecfdf5" stroke="#94a3b8"/>
+<text x="725" y="168" font-family="Arial,sans-serif" font-size="22" fill="#16324f">HC-05 BREAKOUT</text>
+<text x="725" y="205" font-family="Arial,sans-serif" font-size="18" fill="#16324f">VCC → specified supply; GND → common</text>
+<text x="725" y="244" font-family="Arial,sans-serif" font-size="18" fill="#16324f">TXD → D10; RXD ← divided D11 TX</text>
+<text x="725" y="280" font-family="Arial,sans-serif" font-size="16" fill="#16324f">9600-baud data mode: verify actual setting</text>
+<polyline points="330,235 560,235 560,243 700,243" fill="none" stroke="#2563eb" stroke-width="2"/>
+<rect x="395" y="335" width="270" height="145" rx="8" fill="#fff" stroke="#94a3b8"/>
+<text x="410" y="365" font-family="Arial,sans-serif" font-size="19" fill="#16324f">HC-05 RX DIVIDER</text>
+<text x="410" y="400" font-family="Arial,sans-serif" font-size="17" fill="#16324f">D11 → 1 kΩ → junction</text>
+<text x="410" y="435" font-family="Arial,sans-serif" font-size="17" fill="#16324f">junction → RXD and 2 kΩ</text>
+<text x="410" y="466" font-family="Arial,sans-serif" font-size="17" fill="#16324f">2 kΩ other end → GND</text>
+<rect x="700" y="350" width="455" height="250" rx="8" fill="#fef3c7" stroke="#94a3b8"/>
+<text x="725" y="390" font-family="Arial,sans-serif" font-size="22" fill="#16324f">L298N MOTOR DRIVER</text>
+<text x="725" y="430" font-family="Arial,sans-serif" font-size="18" fill="#16324f">ENA D5; IN1 D4; IN2 D7</text>
+<text x="725" y="468" font-family="Arial,sans-serif" font-size="18" fill="#16324f">ENB D6; IN3 D8; IN4 D9</text>
+<text x="725" y="506" font-family="Arial,sans-serif" font-size="18" fill="#16324f">VS → matched motor supply +</text>
+<text x="725" y="544" font-family="Arial,sans-serif" font-size="18" fill="#16324f">Logic 5V → documented module supply</text>
+<text x="725" y="581" font-family="Arial,sans-serif" font-size="17" fill="#16324f">GND → common ground</text>
+<polyline points="330,340 370,340 370,430 700,430" fill="none" stroke="#7c3aed" stroke-width="2"/>
+<polyline points="330,410 360,410 360,468 700,468" fill="none" stroke="#7c3aed" stroke-width="2"/>
+<rect x="40" y="560" width="590" height="115" rx="8" fill="#fff" stroke="#94a3b8"/>
+<text x="60" y="595" font-family="Arial,sans-serif" font-size="19" fill="#16324f">Remove ENA and ENB jumpers. Add one 10 kΩ</text>
+<text x="60" y="628" font-family="Arial,sans-serif" font-size="19" fill="#16324f">pulldown from each enable to GND. Verify flyback</text>
+<text x="60" y="658" font-family="Arial,sans-serif" font-size="17" fill="#16324f">diodes, regulator jumper and actual module schematic.</text>
+<rect x="700" y="665" width="210" height="95" rx="8" fill="#fff" stroke="#94a3b8"/>
+<text x="725" y="704" font-family="Arial,sans-serif" font-size="20" fill="#16324f">LEFT MOTOR</text>
+<text x="725" y="740" font-family="Arial,sans-serif" font-size="18" fill="#16324f">OUT1 / OUT2</text>
+<rect x="945" y="665" width="210" height="95" rx="8" fill="#fff" stroke="#94a3b8"/>
+<text x="963" y="704" font-family="Arial,sans-serif" font-size="20" fill="#16324f">RIGHT MOTOR</text>
+<text x="963" y="740" font-family="Arial,sans-serif" font-size="18" fill="#16324f">OUT3 / OUT4</text>
+<polyline points="805,600 805,665" fill="none" stroke="#334155" stroke-width="2"/>
+<polyline points="1050,600 1050,665" fill="none" stroke="#334155" stroke-width="2"/>
+<rect x="40" y="710" width="590" height="80" rx="8" fill="#fff" stroke="#94a3b8"/>
+<text x="60" y="743" font-family="Arial,sans-serif" font-size="18" fill="#16324f">D2 stop input: normally closed contact to common GND.</text>
+<text x="60" y="775" font-family="Arial,sans-serif" font-size="18" fill="#16324f">Opening/disconnection disarms; not a power cutoff.</text>
+<text x="40" y="835" font-family="Arial,sans-serif" font-size="18" fill="#16324f">Match motor supply to actual ratings and stall current. Common GND joins UNO, radio and driver.</text>
+<text x="40" y="870" font-family="Arial,sans-serif" font-size="18" fill="#16324f">Do not tie external supply positive to USB-powered UNO 5V. Resolve module regulator wiring first.</text>
+<text x="40" y="905" font-family="Arial,sans-serif" font-size="17" fill="#16324f">Labels define nets; connector order is not assumed. See hardware/wiring.md before powering.</text>
+</svg>
